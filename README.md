@@ -1,8 +1,8 @@
-# Augment — ComfyUI Node Pack
+# Augment: ComfyUI Node Pack
 
 A design-focused custom node suite for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), built for digital artists and technical designers who need precision, clean outputs, and scalable workflows.
 
-Augment brings grid systems, construction lines, vector conversion, masking, image transforms, and flow control utilities directly into your ComfyUI graph — so you can build production-ready pipelines without leaving the node canvas.
+Augment brings grid systems, construction lines, vector conversion, masking, image transforms, and flow control utilities directly into your ComfyUI graph, so you can build production-ready pipelines without leaving the node canvas.
 
 ---
 
@@ -27,7 +27,7 @@ Both nodes are powered by the Augment Studio API. An API key is required and ava
 
 ### Image Processing
 
-Precision image manipulation nodes built around the objects and assets that matter most in design workflows. **Logo Mask** makes isolating logos and graphic elements dead simple: it auto-detects the background, thresholds the foreground, fills internal holes, and smooths contours — giving you a clean usable mask from just an image input, no manual selection required. **Mask Bounding Box** rounds out the masking toolkit by reading any mask and outputting the tight bounding box around its content as pixel coordinates, which can then feed directly into crop, placement, or construction line nodes. The crop nodes make it easy to isolate key subjects. **Face Crop** automatically detects and crops to the largest face in an image with configurable padding and square-crop options, while **Image Crop** handles manual region cropping.
+Precision image manipulation nodes built around the objects and assets that matter most in design workflows. **Logo Mask** makes isolating logos and graphic elements dead simple: it auto-detects the background, thresholds the foreground, fills internal holes, and smooths contours giving you a clean usable mask from just an image input, no manual selection required. **Mask Bounding Box** rounds out the masking toolkit by reading any mask and outputting the tight bounding box around its content as pixel coordinates, which can then feed directly into crop, placement, or construction line nodes. The crop nodes make it easy to isolate key subjects. **Face Crop** automatically detects and crops to the largest face in an image with configurable padding and square-crop options, while **Image Crop** handles manual region cropping.
 
 Every node in this section is trigger-aware. Wire them together and your image pipeline runs in exactly the order you designed it, allowing for crazy control. 
 
@@ -120,10 +120,10 @@ By default, ComfyUI evaluates your entire graph at once, everything fires, every
 **Improved Type Nodes** are the backbone, trigger-aware versions of every major ComfyUI data type that hold their value and only pass it through once a trigger arrives. Chain them together and you get a workflow that moves step by step, each stage waiting on the one before it. **Switch** adds conditional logic: feed it a boolean and it fires down one of two paths, blocking the other entirely, true branching inside a ComfyUI graph.
 
 
-| Node                    | Description                                                                                                                                                                                             |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Improved Type Nodes** | Trigger-aware nodes for every major ComfyUI data type (Image, Mask, Latent, Model, Clip, VAE, Conditioning, Int, Float, String, Bool) — holds a value and only passes it through once a trigger arrives |
-| **Switch (Improved)**   | Takes a boolean and fires down either the true or false path, blocking the other — conditional branching inside your graph                                                                              |
+| Node                    | Description                                                                                                                                                                                           |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Improved Type Nodes** | Trigger-aware nodes for every major ComfyUI data type (Image, Mask, Latent, Model, Clip, VAE, Conditioning, Int, Float, String, Bool) holds a value and only passes it through once a trigger arrives |
+| **Switch (Improved)**   | Takes a boolean and fires down either the true or false path, blocking the other conditional branching inside your graph                                                                              |
 
 
 ---
@@ -147,7 +147,7 @@ Every Augment node that does meaningful work outputs structured JSON, coordinate
 
 Improved versions of ComfyUI's core I/O nodes, all trigger-aware and all designed to stay out of your way while giving you more. Every node here passes its value through, so you can drop them anywhere in a chain without breaking it.
 
-**Load Image (Improved)** goes well beyond a standard image loader. Alongside the image it outputs dimensions, alpha mask, and individual R/G/B channel masks, all ready to wire into other nodes without any extra processing. **Preview Any** is particularly useful when building or debugging complex graphs: connect it to any text or numeric output — a JSON string, a variable, a coordinate — and it displays the value inline without interrupting the flow.
+**Load Image (Improved)** goes well beyond a standard image loader. Alongside the image it outputs dimensions, alpha mask, and individual R/G/B channel masks, all ready to wire into other nodes without any extra processing. **Preview Any** is particularly useful when building or debugging complex graphs: connect it to any text or numeric output a JSON string, a variable, a coordinate and it displays the value inline without interrupting the flow.
 
 
 | Node                      | Description                                                                                                                                                                |
@@ -155,7 +155,7 @@ Improved versions of ComfyUI's core I/O nodes, all trigger-aware and all designe
 | **Load Image (Improved)** | Loads an image and outputs width, height, alpha mask, and individual R/G/B channel masks alongside the image tensor. Supports image override input and trigger passthrough |
 | **Preview Image**         | Previews an image inline in the node canvas without writing to the output folder. Passes the image through so the chain keeps running                                      |
 | **Save Image (Improved)** | Saves an image to the output folder with a custom filename prefix. Passes the image through with trigger out                                                               |
-| **Preview Any**           | Displays any text or numeric value — strings, numbers, JSON — as readable text in the node UI. Useful for inspecting outputs mid-graph without interrupting the workflow   |
+| **Preview Any**           | Displays any text or numeric value strings, numbers, JSON as readable text in the node UI. Useful for inspecting outputs mid-graph without interrupting the workflow       |
 
 
 ---
