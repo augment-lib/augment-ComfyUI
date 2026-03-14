@@ -1,0 +1,20 @@
+[project]
+name = "augment-ComfyUI"
+description = "Design-focused node suite for ComfyUI. Convert raster to vector with a built-in PNG to SVG pipeline — bring true vectorization to your generative workflows and stop exporting pixel-locked assets. Includes precision utilities for grid systems, construction lines, edge detection, masking, image transforms, cropping, JSON tools, and flow control. Built for logo design, brand asset pipelines, and anyone who needs clean scalable output from their design based workflows. API tokens for vector nodes available at [augment studio](https://augmentstudio.app/pricing)"
+version = "1.0.0"
+
+dependencies = [
+    "opencv-python>=4.5.0",
+    "numpy>=1.19.0",
+    "torch>=1.9.0",
+    "Pillow>=8.0.0",
+    "requests>=2.25.0"
+]
+
+[project.urls]
+Repository = "https://github.com/augmentstudio/augment"
+
+[tool.comfy]
+PublisherId = "augment"
+DisplayName = "augment-ComfyUI""
+Icon = ""

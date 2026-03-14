@@ -1,0 +1,649 @@
+{
+  "id": "0844657a-3ed3-4e2a-a7c9-54a6f113a60c",
+  "revision": 0,
+  "last_node_id": 13,
+  "last_link_id": 20,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "AugmentLogoMask",
+      "pos": [
+        -100.25392017898614,
+        1025.3065279520267
+      ],
+      "size": [
+        270,
+        234
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "mask_image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "masked_rgb",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "json_result",
+          "type": "AUGMENT_JSON",
+          "links": null
+        },
+        {
+          "name": "trigger",
+          "type": "TRIGGER",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AugmentLogoMask"
+      },
+      "widgets_values": [
+        50,
+        150,
+        true,
+        3,
+        false
+      ]
+    },
+    {
+      "id": 5,
+      "type": "AugmentMaskBoundingBox",
+      "pos": [
+        232.100684634451,
+        945.6714392681223
+      ],
+      "size": [
+        270,
+        226
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "x",
+          "type": "INT",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "y",
+          "type": "INT",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            9
+          ]
+        },
+        {
+          "name": "json_result",
+          "type": "AUGMENT_JSON",
+          "links": null
+        },
+        {
+          "name": "trigger",
+          "type": "TRIGGER",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AugmentMaskBoundingBox"
+      },
+      "widgets_values": [
+        0,
+        false,
+        0.1
+      ]
+    },
+    {
+      "id": 13,
+      "type": "Reroute",
+      "pos": [
+        939.6250943735594,
+        1024.304073871377
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            19,
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 4,
+      "type": "AugmentImageCrop",
+      "pos": [
+        612.3988632473819,
+        1026.1191308977811
+      ],
+      "size": [
+        270,
+        250
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "x",
+          "type": "INT",
+          "widget": {
+            "name": "x"
+          },
+          "link": 5
+        },
+        {
+          "name": "y",
+          "type": "INT",
+          "widget": {
+            "name": "y"
+          },
+          "link": 6
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 8
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "x",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "y",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "json_result",
+          "type": "AUGMENT_JSON",
+          "links": null
+        },
+        {
+          "name": "trigger",
+          "type": "TRIGGER",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AugmentImageCrop"
+      },
+      "widgets_values": [
+        0,
+        0,
+        256,
+        256
+      ]
+    },
+    {
+      "id": 12,
+      "type": "AugmentPreviewImage",
+      "pos": [
+        1407.4440840935729,
+        1190.1110326830787
+      ],
+      "size": [
+        265.1408536461356,
+        286
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 20
+        },
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "TRIGGER",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "json",
+          "type": "AUGMENT_JSON",
+          "links": null
+        },
+        {
+          "name": "trigger",
+          "type": "TRIGGER",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AugmentPreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        -486.9632087162334,
+        1026.1191308977811
+      ],
+      "size": [
+        282.8222198486328,
+        314.0000000000001
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1,
+            11
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "augment_logo.png",
+        "image"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "AugmentBoolPrim",
+      "pos": [
+        612.3988632473819,
+        1342.0527501870952
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "TRIGGER",
+          "link": null
+        },
+        {
+          "name": "input",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "BOOLEAN",
+          "links": [
+            14
+          ]
+        },
+        {
+          "name": "json_result",
+          "type": "AUGMENT_JSON",
+          "links": null
+        },
+        {
+          "name": "trigger",
+          "type": "TRIGGER",
+          "links": null
+        }
+      ],
+      "title": "SAVE_AS_VECTOR?",
+      "properties": {
+        "Node name for S&R": "AugmentBoolPrim"
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 10,
+      "type": "AugmentSwitchNode",
+      "pos": [
+        1170.143532336275,
+        1048.0987133289495
+      ],
+      "size": [
+        150.4999984741211,
+        66
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "BOOLEAN",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "on_true",
+          "type": "TRIGGER",
+          "links": [
+            17
+          ]
+        },
+        {
+          "name": "on_false",
+          "type": "TRIGGER",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "trigger",
+          "type": "TRIGGER",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AugmentSwitchNode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "AugmentPNGToSVG",
+      "pos": [
+        1407.4440840935729,
+        793.8371232979359
+      ],
+      "size": [
+        270,
+        122
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "TRIGGER",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "svg",
+          "type": "SVG",
+          "links": []
+        },
+        {
+          "name": "json",
+          "type": "AUGMENT_JSON",
+          "links": null
+        },
+        {
+          "name": "trigger",
+          "type": "TRIGGER",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AugmentPNGToSVG"
+      },
+      "widgets_values": [
+        "",
+        "example.png"
+      ],
+      "color": "#443322",
+      "bgcolor": "#665533"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      2,
+      0,
+      5,
+      0,
+      "MASK"
+    ],
+    [
+      5,
+      5,
+      1,
+      4,
+      1,
+      "INT"
+    ],
+    [
+      6,
+      5,
+      2,
+      4,
+      2,
+      "INT"
+    ],
+    [
+      8,
+      5,
+      3,
+      4,
+      3,
+      "INT"
+    ],
+    [
+      9,
+      5,
+      4,
+      4,
+      4,
+      "INT"
+    ],
+    [
+      11,
+      1,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      11,
+      0,
+      10,
+      0,
+      "BOOLEAN"
+    ],
+    [
+      16,
+      10,
+      1,
+      12,
+      1,
+      "TRIGGER"
+    ],
+    [
+      17,
+      10,
+      0,
+      7,
+      1,
+      "TRIGGER"
+    ],
+    [
+      18,
+      4,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      13,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      13,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.573085533011682,
+      "offset": [
+        541.1457978789277,
+        -558.8768228145503
+      ]
+    },
+    "frontendVersion": "1.41.18"
+  },
+  "version": 0.4
+}
