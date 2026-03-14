@@ -167,7 +167,7 @@ Augment is not yet listed on the ComfyUI registry. Install it manually by clonin
 ### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/augmentstudio/augment-ComfyUI augment
+git clone https://github.com/augment-lib/augment-ComfyUI augment
 cd augment
 ```
 
