@@ -82,7 +82,7 @@ class BlurAverageNode:
                     }
                 ]
             },
-            "result": (json.dumps(results, indent=2), float(r_255), float(g_255), float(b_255), swatch, "done"),
+            "result": (swatch, float(r_255), float(g_255), float(b_255), json.dumps(results, indent=2), "done"),
         }
 
 
